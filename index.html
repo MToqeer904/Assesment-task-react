@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <!----------------- Navbar start ------------------>
+    <div class="container">
+        <div class="navbar ">
+            <div>
+                <img src='./images/i2cLogo.png' alt='logo' >
+            </div>
+            <div class="toggle-button">&#9776;</div>
+            <div class="navItems">
+                <a href="#">About us</a>
+                <a href="#">Registration</a>
+                <a href="#">Careers</a>
+                <a href="#">Contact us</a>
+        </div>
+        </div>
+    </div>
+
+    <!------------------- Hero start --------------------->
+
+     <section >
+        <div class="container">
+            <h1 class='heroSH'>Lorem ipsum <span class='heroSHSpan'>dolor</span> sit amet yo 👋</h1>
+            <div class='heroSection'>
+                <div>
+                    <div class='heroSecCard'>
+                        <img src="./images/p1.png" alt="image">
+                        <div class='personDetailDiv'>
+                            <span class='personDetailSpan'>Andrew Schultz</span>
+                            <p class='personDetailPara'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae, in tristique senectus dui pharetra sit.</p>
+                        </div>
+                    </div>
+                    <div class='heroSecCard'>
+                        <img src="./images/p2.png" alt="image">
+                        <div class='personDetailDiv'>
+                            <span class='personDetailSpan'>Andrew Schultz</span>
+                            <p class='personDetailPara'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae, in tristique senectus dui pharetra sit.</p>
+                        </div>
+                    </div>
+                    <div class='heroSecCard'>
+                        <img src="./images/p3.png" alt="image">
+                        <div class='personDetailDiv'>
+                            <span class='personDetailSpan'>Andrew Schultz</span>
+                            <p class='personDetailPara'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae, in tristique senectus dui pharetra sit.</p>
+                        </div>
+                    </div>
+                    <div class='heroSecCard'>
+                        
+                    </div>
+                </div>
+            
+                <div><img src="./images/heroSection.png" alt="image" class="heroSectionImg"></div>
+             </div>
+        </div>
+    </section>
+
+    <!------------------- Feature start -------------------------->
+    <section>
+        <div class="container">
+            <div class="features">
+                <div class='featuresMainDiv'> 
+                    <img src="./images/icon1.svg" alt="feature image">
+                    <div>
+                        <h5>24/7 Support</h5>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                    </div>
+                </div>
+                <div class='featuresMainDiv'> 
+                    <img src="./images/icon2.svg" alt="feature image">
+                    <div>
+                        <h5>1000+ of reviews</h5>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                    </div>
+                </div>
+                <div class='featuresMainDiv'> 
+                    <img src="./images/icon3.svg" alt="feature image">
+                    <div>
+                        <h5>And more!</h5>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!------------------- slider start ------------------------->
+
+    <section class='sliderSection'>
+        <div class="container">
+            <div class='sliderUpperContent'>
+                <div class='textWithCurve'>
+                    <h1 class='SliderH1'>Trusted by</h1>
+                    <img src='./images/vectorSlider.svg' alt='featureVector' class='curveLine' >
+                </div>
+                <p class='sliderInfoContent'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae, in tristique senectus dui pharetra sit.</p>
+            </div>
+            <div class="sliderContainer">
+                <div class="slider">
+                    <img class="previous_Img" src='./images/microsoft.svg' alt="Img Microsoft Icon" />
+                    <img class="current_Img center" src='./images/twitter.svg' alt="Img twitter Icon" />
+                    <img class="next_Img" src='./images/cola.svg' alt="Img cola Icon" />
+                </div>
+                <button class="arrow leftArrow" onclick="moveSlider('left')">&lt;</button>
+                <button class="arrow rightArrow" onclick="moveSlider('right')">&gt;</button>
+            </div>
+        </div>
+    </section>
+
+    <!---------------------- Registration form start ------------------>
+
+    <section >
+        <div class="container">
+            <div class='registrationFormSection'>
+                <div>
+                <img src='./images/formImg.png' alt="formImg" class="formImg">
+                </div>
+                <div class='formDiv'>
+                    <h1>Registration</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae, in tristique senectus dui pharetra sit.</p>
+                    <form>
+                        <div class='formField'>
+                            <div class='inputDiv'>
+                                <div class='labelDiv'>
+                                    <label class='label' for="fname" >Name</label><span class='requireSpan'>*</span>
+                                </div>
+                                <input class='input' type="text" id="fname" name="Name" placeholder="Enter Your Name"><br/>
+                            </div>
+                            <div class='inputDiv'>
+                                <div class='labelDiv'>
+                                    <label class='label' for="cname" >Company</label>
+                                </div>
+                                <input class='input' type="text" id="cname" name="Company" placeholder="Enter Your Company Name"><br/>
+                            </div>
+                            <div class='inputDiv'>
+                                <div class='labelDiv'>
+                                    <label class='label' for="email" >Email</label><span class='requireSpan'>*</span>
+                                </div>
+                                <input class='input' type="email" id="email" name="Email Address" placeholder="Enter Your Email Address"><br/>
+                            </div>
+                        </div>
+                        <div class="formField-button"><button class='submitButton' type='submit'>Submit</button></div>
+                        
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!---------------------- Footer start ----------------------------->
+     <hr class="container" style="stroke-width: 1px; stroke: #CBCBCB; margin-top: 0px; margin-bottom: 0px;">
+    <style></style>
+    <div class="container">
+        <div class="footerNavbar ">
+            <div>
+                <img src='./images/i2cLogo.png' alt='logo' >
+            </div>
+            <div class="footerItems">
+                <a href="#">About us</a>
+                <a href="#">Registration</a>
+                <a href="#">Careers</a>
+                <a href="#">Contact us</a>
+            </div>
+        </div>
+        <p class='footerPara'>Copyright © 2023 i2c inc. All rights reserved.</p>
+    </div>
+    
+    <script src="main.js"></script>
+</body>
+</html>

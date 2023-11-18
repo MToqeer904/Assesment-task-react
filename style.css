@@ -1,0 +1,690 @@
+body {
+    font-family: Inter;
+    background: url('./images/Background.svg');
+    background-color: #EBF0FF;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    margin: 3rem 6rem;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 100px;
+}
+
+.navItems {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+
+.navItems a {
+    color: #515151;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration: none;
+    margin-left: 1.5rem;
+
+}
+
+.navItems a:last-child {
+    display: flex;
+    padding: 16px 32px;
+    align-items: flex-start;
+    border-radius: 40px;
+    border: 1px solid #46B0E6;
+    background: #46B0E6;
+    box-shadow: 0px 10px 40px 0px rgba(70, 176, 230, 0.70);
+    color: #FFF;
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 700;
+
+}
+
+.toggle-button {
+    display: none;
+    cursor: pointer;
+    font-size: 30px;
+}
+@media screen and (max-width:991px) {
+    .container{
+        margin: 3rem 3rem;
+    }
+    
+}
+
+@media screen and (max-width: 575px) {
+    .container{
+        margin: 3rem 2rem;
+    }
+    
+    .navbar{
+        padding-bottom: 50px;
+    }
+    .toggle-button {
+        display: block;
+        transition: opacity 0.3s;
+    }
+     .navItems {
+        display: none;
+        flex-direction: column;
+        align-items: start;
+        position: absolute;
+        top: 90px;
+        left: 30px;
+        background-color: #EBF0FF;
+        width: 83%;
+        height: 40vh;
+        border-radius: 10px;
+        box-shadow: 0px 10px 40px 0px rgba(152, 197, 219, 0.7)
+    }
+    
+    .navItems.show {
+        display: flex;
+    }
+    .navbar::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to right, #EBF0FF, transparent);
+        opacity: 0;
+        z-index: -1;
+        transition: opacity 0.3s;
+    }
+    @media screen and (max-width:425px) {
+        .navbar {
+            padding-bottom: 0;
+        } 
+    }
+    .navbar:hover::before {
+        opacity: 1;   
+    }
+
+    .navItems a:last-child {
+        margin: 0 auto 0 auto;
+        padding: 10px 20px;
+        margin-bottom: 10px;
+    }
+
+    .navItems a:first-child {
+        margin-top: 10px;
+    }
+}
+
+/********* Hero Section CSS *********/
+.heroSH {
+    width: 582px;
+    color: #000;
+    font-family: Inter;
+    font-size: 48px;
+    font-weight: 700;
+    margin-top: 0;
+    padding-bottom: 30px;
+}
+
+.heroSHSpan {
+    color: #46B0E6;
+    position: relative;
+    display: inline-block;
+
+}
+
+.heroSHSpan::after {
+    content: url("./images/Vector1.png");
+    display: block;
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 50px;
+    margin-top: 5px
+}
+
+.heroSection {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 100px;
+}
+
+.heroSecCard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 530px;
+    height: 120px;
+    background-color: #F6FBF8;
+    margin-bottom: 16px;
+    border-radius: 10px;
+    box-shadow: 0px 24px 24px 0px rgba(0, 0, 0, 0.08);
+    backdrop-filter: blur(2px);
+}
+
+.heroSecCard img {
+    margin: 24px;
+}
+
+.personDetailDiv {
+    margin-top: 10px;
+}
+
+.personDetailSpan {
+    align-self: stretch;
+    color: #000;
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.personDetailPara {
+    margin-top: 5px;
+    color: #515151;
+    font-family: Inter;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.heroSecCard:last-child {
+    height: 70px;
+    border-radius: 10px;
+    background: linear-gradient(180deg, #F6FBF8 0%, #F6FBF8 0.01%, rgba(246, 251, 248, 0.00) 100%);
+    backdrop-filter: blur(2px);
+    box-shadow: none;
+}
+
+.heroSectionImg {
+    width: 490px;
+}
+@media screen and (max-width: 991px) {
+    .heroSection {
+        flex-direction: column;
+        align-items: center;
+    }
+    .heroSH {
+        width: auto;
+        text-align: center;
+    }
+    .heroSecCard{
+        width: 750px;
+    }
+}
+@media screen and (max-width:768px){
+    .heroSecCard{
+        width: 650px;
+    }
+}
+@media screen and (max-width:575px){
+    .heroSecCard{
+        width: 500px;
+    }
+}
+@media screen and (max-width:425px) {
+    .heroSecCard{
+        width: 356px;
+    }
+    .heroSectionImg {
+        width: 100%;
+    }
+    .heroSection{
+        padding-bottom: 0;
+    }
+}
+@media screen and (max-width:375px) {
+    .heroSecCard{
+        width: 350px;
+    }
+    
+}
+@media screen and (max-width:320px) {
+    .heroSecCard{
+        width: 290px;
+    }
+    
+}
+
+/********** Features Section CSS **************/
+.features {
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px;
+    background-color: #F6FBF8;
+    padding: 24px;
+    margin-bottom: 100px;
+}
+
+.featuresMainDiv {
+    display: flex;
+}
+
+.featuresMainDiv img {
+    padding: 24px;
+}
+
+.featuresMainDiv h5 {
+    align-self: stretch;
+    color: #F89D21;
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 0%;
+}
+
+.featuresMainDiv p {
+    align-self: stretch;
+    color: #515151;
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 10px;
+}
+@media screen and (max-width:991px){
+    .features {
+        flex-direction: column;
+        align-items: center;
+    }
+    .features {
+        
+        border-radius: 0;
+        background-color:#FFF;
+        padding: 0;
+    }
+    .featuresMainDiv{
+        border-radius: 10px;
+        background-color: #F6FBF8;
+        padding: 24px;
+        width: 750px;
+        justify-content: center;
+    }
+    
+}
+@media screen and (max-width:768px){
+    .featuresMainDiv{
+        width: 650px;
+        
+    }
+}
+@media screen and (max-width:575px){
+    .featuresMainDiv{
+        width: 500px;
+    }
+}
+@media screen and (max-width:425px) {
+    .featuresMainDiv{
+        width: 316px;
+    }
+    
+}
+@media screen and (max-width:375px) {
+    .featuresMainDiv{
+        width: 280px;
+    }
+    
+}
+@media screen and (max-width:320px) {
+    .featuresMainDiv{
+        width: 250px;
+    }
+    
+}
+
+/******** Slider Section CSS ************/
+.sliderSection {
+    padding-bottom: 100px;
+}
+
+.textWithCurve {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.curveLine {
+    position: absolute;
+    top: 40px;
+    bottom: 0;
+    background: transparent;
+}
+
+.SliderH1 {
+    color: #000;
+    font-family: Inter;
+    font-size: 36px;
+    font-weight: 800;
+    padding-left: 17px;
+    margin: 0%;
+    padding-bottom: 16px;
+}
+
+.sliderInfoContent {
+    width: 430px;
+    height: 40px;
+    margin: 0 auto;
+    text-align: center;
+    color: #515151;
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.sliderUpperContent {
+    padding-bottom: 24px;
+}
+
+/*************** Slider CSS ***************/
+.sliderContainer {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+.slider {
+    display: flex;
+    justify-content: space-around;
+    transition: transform 0.5s ease;
+    width: 800px;
+}
+
+.slider img {
+    opacity: 0.5;
+    transition: opacity 0.5s ease;
+}
+
+.slider img.center {
+    opacity: 1;
+} 
+
+.arrow {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #46B0E6;
+}
+
+.leftArrow {
+    left: 90px;
+
+}
+
+.rightArrow {
+    right: 90px;
+}
+
+@media screen and (max-width: 786px) {
+    .slider {
+        width: 400px;
+    }
+
+    .slider img {
+        width: 100px;
+    }
+}
+@media screen and (max-width: 426px) {
+    .slider {
+        width: 300px;
+    }
+
+    .slider img {
+        width: 50px;
+    }
+    .leftArrow {
+        left: 20px;
+    
+    }
+    
+    .rightArrow {
+        right: 20px;
+    }
+}
+
+/*************** Form Section ***************/
+.registrationFormSection {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 100px;
+}
+
+.formDiv {
+    width: 400px;
+    height: 480px;
+    padding: 48px;
+    border-radius: 10px;
+    background: #FFF;
+    box-shadow: 0px 34px 44px -20px rgba(185, 206, 234, 0.25);
+}
+
+.formDiv h1 {
+    color: #000;
+    font-family: Inter;
+    font-size: 36px;
+    font-weight: 800;
+    margin: 0%;
+}
+
+.requireSpan {
+    color: #EB5939;
+}
+
+.formDiv p {
+    color: #515151;
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 0;
+}
+
+.inputDiv {
+    display: flex;
+    flex-direction: column;
+}
+
+.formField {
+    padding: 30px 0;
+}
+
+.label {
+    color: #000;
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.labelDiv {
+    padding-bottom: 5px;
+
+}
+
+.input {
+    padding: 16px;
+    border-radius: 5px;
+    border: 1px solid #DEE6FF;
+    background: #F9FAFF;
+}
+
+.submitButton {
+    color: #FFF;
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 700;
+    width: 190px;
+    padding: 14px 28px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 40px;
+    border: 1px solid #F89D21;
+    background: #F89D21;
+    box-shadow: 0px 10px 34px 0px rgba(248, 157, 33, 0.50);
+}
+
+@media screen and (max-width: 991px) {
+    .registrationFormSection {
+        flex-direction: column;
+        align-items: center;
+    }
+    .formDiv {
+        margin-top: 50px;
+        width: 750px;
+    }
+}
+@media screen and (max-width:768px) {
+    .formDiv {
+        width: 650px;
+    }
+    .formDiv h1{
+        text-align: center;
+    }
+    .formDiv p{
+        text-align: center;
+    }
+    .submitButton{
+        text-align: center;
+    }
+    .formField-button{
+        display: flex;
+        justify-content: center;
+    }
+}
+@media screen  and (max-width: 425px){
+    .formImg{
+        width: 100%;
+    }
+    .formDiv {
+        width: 356px;
+        height: 500px;
+        padding: 21px;
+    }
+}
+@media screen and (max-width:375px) {
+    .formDiv {
+        width: 340px;
+        padding: 9px;
+    }
+
+}
+@media screen and (max-width:320px) {
+    .heroSH {
+        font-size: 36px;
+    }
+    
+    .formDiv{
+        width: 280px;
+        height: 515px;
+        
+    }
+    .formDiv h1{
+        text-align: center;
+    }
+    .formDiv p{
+        text-align: center;
+    }
+    .submitButton{
+        text-align: center;
+    }
+    .formField-button{
+        display: flex;
+        justify-content: center;
+    }
+    
+}
+
+
+.footerSection {
+    padding: 32px 0;
+}
+.footerNavbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 32px 0;
+}
+/********** footer paragraph  *************/
+.footerPara {
+    color: #515151;
+    font-family: Inter;
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 18px;
+    margin-top: 0px;
+    margin-bottom: 0;
+}
+.footerItems {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+
+.footerItems a {
+    color: #515151;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration: none;
+    margin-left: 1.5rem;
+
+}
+
+.footerItems a:last-child {
+    display: flex;
+    padding: 16px 32px;
+    align-items: flex-start;
+    border-radius: 40px;
+    border: 1px solid #46B0E6;
+    background: #46B0E6;
+    box-shadow: 0px 10px 40px 0px rgba(70, 176, 230, 0.70);
+    color: #FFF;
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 700;
+
+}
+@media screen  and (max-width: 425px){
+    .footerNavbar{
+        flex-direction: column;
+        align-items: center;
+    }
+    .footerItems{
+        flex-direction: column;
+        row-gap: 25px;
+    }
+    .footerItems a {
+        padding-top: 20px;
+    }
+    .footerPara {
+        text-align: center;
+    }
+}
+@media screen and (max-width:375px) {
+   
+
+}
+@media screen and (max-width:320px) {
+    
+    
+}
+
+
