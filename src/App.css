@@ -1,0 +1,550 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+body {
+  background: url('./images/Background.svg');
+  background-color: #EBF0FF;  
+}
+.app {
+  margin: 3rem 6rem;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 100px;
+}
+.footerNavbar {
+  padding: 32px 0;
+}
+.navItems {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+}
+.navItems  a{
+  color: #515151;
+font-family: Inter;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+  text-decoration: none;
+  margin-left: 1.5rem;
+  
+}
+.navItems  a:last-child{
+  display: flex;
+padding: 16px 32px;
+align-items: flex-start;
+  border-radius: 40px;
+border: 1px solid #46B0E6;
+background: #46B0E6;
+box-shadow: 0px 10px 40px 0px rgba(70, 176, 230, 0.70);
+color: #FFF;
+font-family: Inter;
+font-size: 16px;
+font-weight: 700;
+
+}
+.toggle-button {
+  display: none; 
+  cursor: pointer;
+  font-size: 30px;
+}
+@media screen and (max-width: 426px) {
+  .app {
+    width: 90%;
+    margin-left: 1.5rem;
+    margin-top: 2rem;
+  }
+  .toggle-button {
+    display: block;
+    transition: opacity 0.3s; 
+  }
+
+  .navItems {
+    display: none;
+    flex-direction: column;
+    align-items: start;
+    position: absolute;
+    top: 80px; 
+    left: 27px;
+    background-color: #EBF0FF;
+    width: 83%;
+    height: 40vh;
+    border-radius: 10px;
+box-shadow: 0px 10px 40px 0px rgba(152, 197, 219, 0.7);
+
+
+
+  }
+
+  .navItems.visible {
+    display: flex;
+  }
+  .navbar::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, #EBF0FF, transparent); 
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 0.3s; 
+  }
+
+  .navbar:hover::before {
+    opacity: 1; /* Show on hover */
+  }
+  .navItems  a:last-child{
+    margin: 0 auto 0 auto;
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  }
+  .navItems a:first-child {
+    margin-top: 10px;
+  }
+}
+
+/********* Hero Section CSS *********/
+.heroSH {
+  width: 582px;
+  color: #000;
+  font-family: Inter;
+  font-size: 48px;
+  font-weight: 700;
+  margin-top: 0;
+  padding-bottom: 30px;
+}
+.heroSHSpan {
+  color: #46B0E6;
+  position: relative;
+  display: inline-block;
+
+}
+.heroSHSpan::after{
+      content: url("./images/Vector1.png");
+      display: block;
+      position: absolute;
+      top: 20%;
+      left: 20%;
+      transform: translateX(-50%);
+      width: 50px; 
+      height: 50px; 
+      margin-top: 5px
+}
+.heroSection {
+  display: flex;
+  padding-bottom: 100px;
+}
+.heroSecCard{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 530px;
+  height: 120px;
+  background-color: #F6FBF8;
+  margin-bottom: 16px;
+  border-radius: 10px;
+  box-shadow: 0px 24px 24px 0px rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(2px);
+}
+.heroSecCard img {
+  margin: 24px;
+}
+.personDetailDiv {
+  margin-top: 10px;
+}
+.personDetailSpan {
+  align-self: stretch;
+  color: #000;
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 500;
+}
+.personDetailPara {
+  margin-top: 5px;
+  color: #515151;
+  font-family: Inter;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.heroSecCard:last-child {
+  height: 70px;
+  border-radius: 10px;
+  background: linear-gradient(180deg, #F6FBF8 0%, #F6FBF8 0.01%, rgba(246, 251, 248, 0.00) 100%);
+  backdrop-filter: blur(2px);
+  box-shadow: none;
+}
+.heroSectionImg {
+  width: 490px;
+}
+@media (min-width: 426px) and (max-width: 786px) {
+  .heroSection {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media (max-width: 426px) {
+  .heroSection {
+    flex-direction: column;
+  }
+  .heroSection h1 {
+    display: inline;
+    font-size: 1.2rem;
+  }
+  .heroSecCard {
+    width: 300px;
+    height: 120px;
+  }
+  .heroSectionImg {
+    width: 353px;
+  }
+}
+/********** Features Section CSS **************/
+.features {
+  display: flex;
+  border-radius: 10px;
+  background-color: #F6FBF8;
+  padding: 24px;
+  margin-bottom: 100px;
+}
+.featuresMainDiv {
+  display: flex;
+}
+.featuresMainDiv img {
+  padding: 24px;
+}
+.featuresMainDiv h5 {
+  align-self: stretch;
+  color: #F89D21;
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 0%;
+}
+.featuresMainDiv p {
+  align-self: stretch;
+  color: #515151;
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: 10px;
+}
+@media (min-width: 426px) and (max-width: 786px) {
+  .featuresMainDiv {
+    flex-direction: column;
+    align-items: center;
+  }
+  .featuresMainDiv img {
+    padding: 0px;
+  }
+}
+/******** Slider Section CSS ************/
+.sliderSection {
+  padding-bottom: 100px;
+}
+.textWithCurve {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.curveLine {
+  position: absolute;
+  top: 40px;
+  bottom: 0;
+  background: transparent;
+}
+.SliderH1 {
+  color: #000;
+  font-family: Inter;
+  font-size: 36px;
+  font-weight: 800;
+  padding-left: 17px;
+  margin: 0%;
+  padding-bottom: 16px;
+}
+.sliderInfoContent {
+  width: 430px;
+  height: 40px;
+  margin: 0 auto;
+  text-align: center;
+  color: #515151;
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 500;
+}
+.sliderUpperContent {
+  padding-bottom: 24px;
+}
+/*************** Slider CSS ***************/
+.sliderContainer {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+.slider {
+  display: flex;
+  justify-content: space-around;
+  transition: transform 0.5s ease;
+  width: 800px;
+}
+.slider img {
+  opacity: 0.4;
+  transition: opacity 0.5s ease;
+}
+
+.slider img.center {
+  opacity: 1;
+}
+.arrow {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #46B0E6;
+}
+
+.leftArrow {
+  left: 90px;
+  
+}
+
+.rightArrow {
+  right: 90px;
+}
+@media screen and (max-width:991px) {
+  .container{
+      margin: 3rem 3rem;
+  }
+  
+}
+
+@media screen and (max-width: 575px) {
+  .container{
+      margin: 3rem 2rem;
+  }
+  
+  .navbar{
+      padding-bottom: 50px;
+  }
+  .toggle-button {
+      display: block;
+      transition: opacity 0.3s;
+  }
+   .navItems {
+      display: none;
+      flex-direction: column;
+      align-items: start;
+      position: absolute;
+      top: 90px;
+      left: 30px;
+      background-color: #EBF0FF;
+      width: 83%;
+      height: 40vh;
+      border-radius: 10px;
+      box-shadow: 0px 10px 40px 0px rgba(152, 197, 219, 0.7)
+  }
+  
+  .navItems.show {
+      display: flex;
+  }
+  .navbar::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to right, #EBF0FF, transparent);
+      opacity: 0;
+      z-index: -1;
+      transition: opacity 0.3s;
+  }
+  @media screen and (max-width:425px) {
+      .navbar {
+          padding-bottom: 0;
+      } 
+  }
+  .navbar:hover::before {
+      opacity: 1;   
+  }
+
+  .navItems a:last-child {
+      margin: 0 auto 0 auto;
+      padding: 10px 20px;
+      margin-bottom: 10px;
+  }
+
+  .navItems a:first-child {
+      margin-top: 10px;
+  }
+}
+/*************** Form Section ***************/
+.registrationFormSection {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 100px;
+}
+.formDiv {
+  width: 400px;
+  height: 480px;
+  padding: 48px;
+  border-radius: 10px;
+  background: #FFF;
+  box-shadow: 0px 34px 44px -20px rgba(185, 206, 234, 0.25);
+} 
+.formDiv h1 {
+  color: #000;
+font-family: Inter;
+font-size: 36px;
+font-weight: 800;
+margin: 0%;
+}
+.requireSpan {
+  color: #EB5939;
+}
+
+.formDiv p{
+  color: #515151;
+font-family: Inter;
+font-size: 16px;
+font-weight: 500;
+margin-bottom: 0;
+}
+.inputDiv {
+  display: flex;
+  flex-direction: column;
+}
+.formField {
+  padding: 30px 0;
+}
+.label {
+color: #000;
+font-family: Inter;
+font-size: 16px;
+font-weight: 500;
+}
+.labelDiv {
+  padding-bottom: 5px;
+  
+}
+.input {
+  padding: 16px ;
+  border-radius: 5px;
+  border: 1px solid #DEE6FF;
+  background: #F9FAFF;
+}
+.submitButton {
+  color: #FFF;
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 700;
+  width: 190px;
+  padding: 14px 28px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 40px;
+  border: 1px solid #F89D21;
+  background: #F89D21;
+  box-shadow: 0px 10px 34px 0px rgba(248, 157, 33, 0.50);
+}
+@media (min-width: 426px) and (max-width: 786px) {
+  .registrationFormSection {
+    flex-direction: column;
+    align-items: center;
+  }
+  .formDiv {
+    margin-top: 50px;
+  }
+}
+.footerSection {
+  padding: 32px 0;
+
+}
+/********** footer paragraph  *************/
+.footerNavbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 32px 0;
+}
+.footerPara {
+  color: #515151;
+font-family: Inter;
+font-size: 11px;
+font-weight: 400;
+line-height: 18px; 
+margin-top: 0px;
+margin-bottom: 0;
+}
+
+/********** Footer Classes *****************/
+.footerItems {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+}
+
+.footerItems a {
+  color: #515151;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration: none;
+  margin-left: 1.5rem;
+
+}
+
+.footerItems a:last-child {
+  display: flex;
+  padding: 16px 32px;
+  align-items: flex-start;
+  border-radius: 40px;
+  border: 1px solid #46B0E6;
+  background: #46B0E6;
+  box-shadow: 0px 10px 40px 0px rgba(70, 176, 230, 0.70);
+  color: #FFF;
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 700;
+
+}
+@media screen  and (max-width: 425px){
+  .footerNavbar{
+      flex-direction: column;
+      align-items: center;
+  }
+  .footerItems{
+      flex-direction: column;
+      row-gap: 25px;
+  }
+  .footerItems a {
+      padding-top: 20px;
+  }
+  .footerPara {
+      text-align: center;
+  }
+}
+@media screen and (max-width:375px) {
+ 
+
+}
+@media screen and (max-width:320px) {
+  
+  
+}
+
